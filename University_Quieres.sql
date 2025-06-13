@@ -1,4 +1,4 @@
---@C:\Users\melvi\SQL_Projects\University\University_Quieres.txt
+
 --1)Show students first and last name, student number, and department names of students who have a minor in biology
 SELECT
 	FIRST_NAME,
