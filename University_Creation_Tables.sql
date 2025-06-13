@@ -1,4 +1,4 @@
---SQL> @C:\Users\melvi\SQL_Projects\University\University_Creation_Tables.sql
+
 --*******************************
 --Loading Univerity Database Tables:
 --	U_STUDENTS
