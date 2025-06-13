@@ -181,14 +181,13 @@ COMMIT;
 --//////////////////////////////////////////////////////////////
 
 --U_GRADE_REPORTS
---ensures that every STUDENT_NUM in U_GRADE_REPORTS must exist in the U_STUDENTS table's STUDENTS_NUMBER column.
+--Ensures that every STUDENT_NUM in U_GRADE_REPORTS must exist in the U_STUDENTS table's STUDENTS_NUMBER column.
 ALTER TABLE U_GRADE_REPORTS
 ADD CONSTRAINT FK_U_GRADE_REPORTS_STUDENT_NUM
 FOREIGN KEY(STUDENT_NUM)
 	REFERENCES U_STUDENTS(STUDENTS_NUMBER);
 
---Error here
---ensures that each grade report is linked to a valid course section offering.
+--Ensures that each grade report is linked to a valid course section offering.
 --It requires that the combination (SEMESTER, SECTION_NUM, YEAR) in U_GRADE_REPORTS exists in the U_SECTIONS table.
 ALTER TABLE U_GRADE_REPORTS
 ADD CONSTRAINT FK_U_GRADE_REPORTS_SECTION_AREA 
