@@ -1,5 +1,3 @@
---@C:\Users\melvi\SQL_Projects\University\University-data.sql
---//////////////////////////////////////////////////////////////
 
 --(DEPT_NAME, DEPT_CODE, OFFICE_NUMBER, OFFICE_PHONE, COLLEGE)
 
