@@ -1,4 +1,4 @@
---SQL> @C:\Users\melvi\SQL_Projects\University\University_Deletion_Tables.sql
+
 
 DROP TABLE U_STUDENTS CASCADE CONSTRAINTS;
 DROP SEQUENCE SEQ_STUDENTS_NUMBER;
