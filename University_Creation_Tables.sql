@@ -1,4 +1,4 @@
-
+--SQL> @C:\Users\melvi\SQL_Projects\University\University_Creation_Tables.sql
 --*******************************
 --Loading Univerity Database Tables:
 --	U_STUDENTS
@@ -148,11 +148,13 @@ COMMIT;
 --Creating constraints for University database
 
 --U_STUDENTS
+--Ensures that every MAJOR_DEPT value in U_STUDENTS matches an existing DEPT_NAME in the U_DEPARTMENT table.
 ALTER TABLE U_STUDENTS
 ADD CONSTRAINT FK_U_STUDENTS_MAJOR_DEGREE
 FOREIGN KEY(MAJOR_DEPT)
 	REFERENCES U_DEPARTMENT(DEPT_NAME);
 
+--Ensures that every MINOR_DEPT value in U_STUDENTS matches an existing DEPT_NAME in the U_DEPARTMENT table.
 ALTER TABLE U_STUDENTS
 ADD CONSTRAINT FK_U_STUDENTS_MINOR_DEGREE
 FOREIGN KEY(MINOR_DEPT)
@@ -163,6 +165,7 @@ COMMIT;
 --//////////////////////////////////////////////////////////////
 
 --U_COURSES
+--Ensures OFFERING_DEPT in U_COURSES must match a valid DEPT_CODE in U_DEPARTMENT.
 ALTER TABLE U_COURSES
 ADD CONSTRAINT FK_U_COURSES_OFFERING_DEPT
 FOREIGN KEY(OFFERING_DEPT)
@@ -171,6 +174,7 @@ FOREIGN KEY(OFFERING_DEPT)
 --//////////////////////////////////////////////////////////////
 
 --U_SECTIONS
+--Ensures that each section in U_SECTIONS is linked to an existing course in U_COURSES.
 ALTER TABLE U_SECTIONS
 ADD CONSTRAINT FK_U_SECTIONS_COURSE
 FOREIGN KEY(COURSE)
