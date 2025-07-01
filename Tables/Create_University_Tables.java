@@ -11,7 +11,7 @@ public class Create_University_Tables {
 		// Prompt user for Oracle credentials
 	    String user = readEntry("Enter Oracle DB username: ");        
 	    String password = readEntry("Enter Oracle password username: ");
-	    String url = "[your url]"; 
+	    String url = "[your URL]"; 
 		try(Connection conn = DriverManager.getConnection(url, user, password);
 			    Statement stmt = conn.createStatement()) 
 			{
@@ -28,7 +28,7 @@ public class Create_University_Tables {
 			    		+ "PHONE_NUMBER				VARCHAR(30), "
 			    		+ "PERMANENT_PHONE_NUMBER	VARCHAR(30) NOT NULL, "
 			    		+ "BDATE					DATE 	    NOT NULL, "
-			    		+ "SEX						CHAR, "
+			    		+ "GENDER					CHAR, "
 			    		+ "CLASS					VARCHAR(25) NOT NULL, "
 			    		+ "MAJOR_DEPT				VARCHAR(25) NOT NULL, "
 			    		+ "MINOR_DEPT				VARCHAR(25), "
@@ -108,8 +108,8 @@ public class Create_University_Tables {
 	            		+ "SEMESTER	VARCHAR(10) NOT NULL, "
 	            		+ "SECTION_NUM	NUMBER(10), "
 	            		+ "YEAR		NUMBER(4)   NOT NULL, "
-	            		+ "COURSE		NUMBER(10)  NOT NULL) "
-	            		;
+	            		+ "COURSE		NUMBER(10)  NOT NULL) ";
+	            
 	            String sectionsPrimaryKey = "ALTER TABLE U_SECTIONS "
 	            		+ "ADD CONSTRAINT PK_U_SECTIONS_SECT_NUM PRIMARY KEY(SEMESTER,SECTION_NUM,YEAR)";	   
 	            
